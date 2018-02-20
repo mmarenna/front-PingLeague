@@ -27,8 +27,8 @@ const routes: Routes=[
     FooterComponent,
     DirectivaComponent,
     HomeComponent,
-    JugadoresComponent,
-    FormComponent
+    JugadoresComponent
+    //FormComponent
   ],
   imports: [
     BrowserModule,
