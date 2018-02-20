@@ -1,0 +1,31 @@
+<div class="card bg-light mb-3" >
+  <div class="card-header">Jugadores</div>
+  <div class="card-body">
+    <h5 class="card-title">Campeonato Ping Pong 2018</h5>
+<!--
+  <div class="my-2 text-left">
+    <button class="btn btn-rounded btn-primary" type="button" [routerLink]="['/partido/form']">Cargar partido </button>
+  </div>
+-->
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+        <!--  <th>Pos.</th> -->
+         <th>Points</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+    <tbody>
+      <tr *ngFor="let jugador of jugadores">
+    <!--    <td>{{$index+1}}</td>-->
+        <td>{{ jugador.points}}</td>
+        <td>{{ jugador.name}}</td>
+        <td>{{ jugador.lastName}}</td>
+        <td>{{ jugador.email}}</td>
+      </tr>
+    </tbody>
+    </table>
+  </div>
+</div>
