@@ -9,7 +9,7 @@ import { JugadoresService } from './jugadores/jugadores.service';
 import { HttpClientModule } from '@angular/common/http'
 //IMPORTO LO NECESARIO PARA HACER EL RUTEO
 import  {RouterModule, Routes} from '@angular/router';
-import { FormComponent } from './jugadores/form.component';
+//import { FormComponent } from './jugadores/form.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms'
 // EN ESTA CONSTANTE DECLARO TODOS LOS DISTINTOS RUTEOS
