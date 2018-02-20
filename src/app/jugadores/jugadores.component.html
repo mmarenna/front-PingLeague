@@ -10,16 +10,16 @@
     <table class="table table-bordered table-striped">
       <thead>
         <tr>
-        <!--  <th>Pos.</th> -->
-         <th>Points</th>
+          <th>Pos.</th>
+          <th>Points</th>
           <th>Nombre</th>
           <th>Apellido</th>
           <th>Email</th>
         </tr>
       </thead>
     <tbody>
-      <tr *ngFor="let jugador of jugadores">
-    <!--    <td>{{$index+1}}</td>-->
+      <tr *ngFor="let jugador of jugadores;let i=index">
+        <td>{{i+1}}°</td>
         <td>{{ jugador.points}}</td>
         <td>{{ jugador.name}}</td>
         <td>{{ jugador.lastName}}</td>
