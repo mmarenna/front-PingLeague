@@ -17,8 +17,8 @@ const routes: Routes=[
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'directivas', component: DirectivaComponent},
   {path: 'jugadores', component: JugadoresComponent},
-  {path: 'home', component: HomeComponent},
-  {path: 'jugadores/form', component: FormComponent}
+  {path: 'home', component: HomeComponent}
+//  {path: 'jugadores/form', component: FormComponent}
 ]
 @NgModule({
   declarations: [

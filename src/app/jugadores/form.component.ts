@@ -9,12 +9,12 @@ import {Router} from '@angular/router'
 })
 export class FormComponent implements OnInit {
   private cliente: Jugadores = new Jugadores()
-  private titulo: string ="Crear cliente"
+//  private titulo: string ="Crear cliente"
   constructor(private clienteService: JugadoresService, private router: Router) { }
 
   ngOnInit() {
   }
-
+/*
   public create(): void{
     //console.log("Clicked!")
     console.log(this.cliente);
@@ -22,5 +22,5 @@ export class FormComponent implements OnInit {
       response => this.router.navigate(['/clientes'])
     )
   }
-
+*/
 }
