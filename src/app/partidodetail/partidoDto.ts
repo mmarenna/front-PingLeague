@@ -1,8 +1,10 @@
+import {JugadorDto} from './JugadorDto'
+import {ScheduleDto} from './ScheduleDto'
 export class PartidoDto {
   id: number;
-  local: string;
-  visitor: string;
-  localPlayerResult: string;
-  visitorPlayerResult: string;
-  
+  local: JugadorDto;
+  visitor: JugadorDto;
+  localPlayerResult: number;
+  visitorPlayerResult: number;
+  schedule: ScheduleDto;
 }
