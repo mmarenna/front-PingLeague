@@ -6,19 +6,20 @@
       <thead>
         <tr>
           <th>Local</th>
-          <th>Puntos Actuales</th>
           <th>Visitante</th>
-          <th>Puntos Actuales</th>
-          <th>Fecha jugada</th>
+          <th>Ficha del Partido</th>
         </tr>
       </thead>
     <tbody>
       <tr *ngFor="let partido of partidos">
         <td>{{ partido.local.name}}</td>
-        <td>{{ partido.local.points}}</td>
         <td>{{ partido.visitor.name}}</td>
-        <td>{{ partido.visitor.points}}</td>
-        <td>{{partido.played }}</td>
+        <td  *ngIf="partido.played else elseBlock">
+            <button type="button" name="button" [routerLink]="['/partido/detalle', partido.id]"  class="btn btn-primary">Ficha del partido</button>
+        </td>
+        <ng-template #elseBlock>
+            <button type="button" name="button" disabled="{{partido.played}}"  class="btn btn-default">Partido no jugado</button>
+        </ng-template>
       </tr>
     </tbody>
     </table>
