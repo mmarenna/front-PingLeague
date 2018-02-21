@@ -1,0 +1,43 @@
+<div class="d-block p-1  text-dark ">
+  <h3 class="underline">{{partido.schedule.date}}</h3>
+  <h3 class="lead">{{partido.local.name}} vs {{partido.visitor.name}}</h3>
+</div>
+
+<div class="container">
+  <table class="table table-bordered">
+    <thead class="thead-light">
+      <tr>
+        <th>Puntos obtenidos en la fecha por: {{partido.local.name}}</th>
+        <th>Puntos actuales en el campeonato: </th>
+      </tr>
+    </thead>
+  <tbody>
+    <tr>
+      <td>{{ partido.localPlayerResult}}</td>
+      <td>{{partido.local.points}}</td>
+    </tr>
+  </tbody>
+  </table>
+</div>
+
+<div class="container">
+  <table class="table table-bordered">
+    <thead class="thead-light">
+      <tr>
+        <th>Puntos obtenidos en la fecha por: {{partido.visitor.name}}</th>
+        <th>Puntos actuales en el campeonato: </th>
+      </tr>
+    </thead>
+  <tbody>
+    <tr>
+      <td>{{ partido.visitorPlayerResult}}</td>
+      <td>{{partido.visitor.points}}</td>
+    </tr>
+  </tbody>
+  </table>
+</div>
+
+<div *ngIf="(partido.localPlayerResult > partido.visitorPlayerResult) else others_win"><h3><span class="underline">Ganador de la fecha:</span> {{partido.local.name}}</h3></div>
+<ng-template #others_win>
+  <div ><h3><span style="underline">Ganador de la fecha:</span> {{partido.visitor.name}}</h3></div>
+</ng-template>
