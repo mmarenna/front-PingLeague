@@ -1,0 +1,26 @@
+
+<div class="card bg-light mb-3" >
+  <div class="card-header">Detalles de partidos</div>
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Local</th>
+          <th>Puntos Actuales</th>
+          <th>Visitante</th>
+          <th>Puntos Actuales</th>
+          <th>Fecha jugada</th>
+        </tr>
+      </thead>
+    <tbody>
+      <tr *ngFor="let partido of partidos">
+        <td>{{ partido.local.name}}</td>
+        <td>{{ partido.local.points}}</td>
+        <td>{{ partido.visitor.name}}</td>
+        <td>{{ partido.visitor.points}}</td>
+        <td>{{partido.played }}</td>
+      </tr>
+    </tbody>
+    </table>
+  </div>
+</div>

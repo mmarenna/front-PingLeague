@@ -1,0 +1,24 @@
+<div class="card bg-light mb-3" >
+  <div class="card-header">Jugadores</div>
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+    <tbody>
+      <tr *ngFor="let jugador of jugadores">
+        <td>{{ jugador.name}}</td>
+        <td>{{ jugador.lastName}}</td>
+        <td>{{ jugador.email}}</td>
+        <td>
+          <button type="button" name="button" [routerLink]="['/jugador/detalle', jugador.email]" class="btn btn-primary">Ver partidos</button>
+        </td>
+      </tr>
+    </tbody>
+    </table>
+  </div>
+</div>
