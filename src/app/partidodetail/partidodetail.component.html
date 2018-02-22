@@ -1,8 +1,9 @@
 <div class="d-block p-1  text-dark ">
   <h3 class="underline">{{partido.schedule.date}}</h3>
-  <h3 class="lead">{{partido.local.name}} vs {{partido.visitor.name}}</h3>
+  <h3 class="lead center">{{partido.local.name}} vs {{partido.visitor.name}}</h3>
 </div>
 
+<!-- <div class="row">
 <div class="container">
   <table class="table table-bordered">
     <thead class="thead-light">
@@ -19,9 +20,35 @@
   </tbody>
   </table>
 </div>
+</div> -->
 
-<div class="container">
-  <table class="table table-bordered">
+<div class="row align-center">
+  <div class="col-md-6">
+    <div class="card bg-light mb-3" style="max-width: 18rem;">
+      <div class="card-header"><h4>{{partido.visitor.name}}</h4></div>
+      <div class="card-body">
+  <h5 class="card-title">Puntos obtenidos en la fecha por: {{partido.visitor.name}}</h5>
+  <p class="card-text">{{ partido.visitorPlayerResult}}</p>
+  <h5 class="card-title">Puntos actuales en el campeonato: </h5>
+  <p class="card-text">{{partido.visitor.points}}</p>
+    </div>
+</div>
+</div>
+
+<div class="col-md-6">
+  <div class="card bg-light mb-3" style="max-width: 18rem;">
+    <div class="card-header"><h4>{{partido.local.name}}</h4></div>
+          <div class="card-body">
+          <h5 class="card-title">Puntos obtenidos en la fecha por: {{partido.local.name}}</h5>
+  <p class="card-text">{{ partido.localPlayerResult}}</p>
+  <h5 class="card-title">Puntos actuales en el campeonato: </h5>
+  <p class="card-text">{{partido.local.points}}</p>
+  </div>
+</div>
+</div>
+</div>
+
+  <!-- <table class="table table-bordered">
     <thead class="thead-light">
       <tr>
         <th>Puntos obtenidos en la fecha por: {{partido.visitor.name}}</th>
@@ -34,10 +61,13 @@
       <td>{{partido.visitor.points}}</td>
     </tr>
   </tbody>
-  </table>
-</div>
+  </table> -->
 
-<div *ngIf="(partido.localPlayerResult > partido.visitorPlayerResult) else others_win"><h3><span class="underline">Ganador de la fecha:</span> {{partido.local.name}}</h3></div>
+<div *ngIf="(partido.localPlayerResult > partido.visitorPlayerResult) else others_win">
+  <h3><span class="underline">Ganador de la fecha:</span> {{partido.local.name}}</h3>
+</div>
 <ng-template #others_win>
-  <div ><h3><span style="underline">Ganador de la fecha:</span> {{partido.visitor.name}}</h3></div>
+  <div >
+    <h3><span style="underline">Ganador de la fecha:</span> {{partido.visitor.name}}</h3>
+  </div>
 </ng-template>
